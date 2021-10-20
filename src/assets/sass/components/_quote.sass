@@ -1,0 +1,84 @@
+.quote 
+    padding-top: 100px
+    &__container 
+    &__title 
+        @include adaptiv-value('font-size', 40, 25, 1)
+        color: #fff
+        text-align: center
+        font-weight: 200
+        &:not(:last-child)
+            margin-bottom: 25px
+    &__wrapper
+        background: #fff
+        border-radius: 5px
+        @include adaptiv-value('padding-top', 50, 25, 1)
+        @include adaptiv-value('padding-bottom', 25, 10, 1)
+        @include adaptiv-value('padding-left', 35, 17, 1)
+        @include adaptiv-value('padding-right', 35, 17, 1)
+        text-align: center
+    &__body
+
+        display: flex
+        flex-direction: column
+        align-items: center
+        border-bottom: 1px solid #ccc
+        &:not(:last-child)
+            padding-bottom: 20px
+    &__text
+        @include adaptiv-value('font-size', 19, 17, 1)
+        color: #22313f
+        font-weight: 500
+
+        // height: 70px
+        // overflow: auto
+        &:not(:last-child)
+            margin-bottom: 20px
+        @media (max-width: $md4 + px)//Less 479
+           @include adaptiv-value('font-size', 27, 16, 1)
+    &__author
+        position: relative
+        @include adaptiv-value('font-size', 22, 17, 1)
+        color: #22313f
+        font-weight: 400
+        text-align: right
+        align-self: flex-end
+        // &::before
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 1px
+            background: #000
+    &__bottom
+        padding-top: 20px
+        display: flex
+        justify-content: space-between
+    &__link
+        background: #22313f
+        padding: 10px
+        border-radius: 6px
+        transition: all 0.3s ease 0s
+        &::before
+            color: #fff
+            font-size: 23px
+        @media (any-hover: hover )
+            &:hover
+                background: #2c435bf9
+    &__btn
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        min-width: 150px
+        padding: 10px
+        background: #22313f
+        border-radius: 6px
+        transition: all 0.3s ease 0s
+        
+        color: #fff
+        @media (any-hover: hover )
+            &:hover
+                background: #2c435bf9
+        @media (max-width: $md4 + px)//Less 479
+            padding: 5px
+            min-width: 100px
