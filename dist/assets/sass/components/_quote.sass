@@ -52,6 +52,10 @@
         padding-top: 20px
         display: flex
         justify-content: space-between
+        align-items: center
+    &__icon
+        flex: 1 1 auto //number to right
+        display: flex
     &__link
         background: #22313f
         padding: 10px
@@ -63,6 +67,11 @@
         @media (any-hover: hover )
             &:hover
                 background: #2c435bf9
+    &__counter
+        @include adaptiv-value('font-size', 25, 17, 1)
+        font-weight: 500
+        color: #22313f
+        padding-right: 20px
     &__btn
         display: flex
         flex-direction: column
@@ -74,7 +83,7 @@
         background: #22313f
         border-radius: 6px
         transition: all 0.3s ease 0s
-        
+        align-self: stretch
         color: #fff
         @media (any-hover: hover )
             &:hover

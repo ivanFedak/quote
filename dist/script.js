@@ -1203,9 +1203,11 @@ var quote = function quote() {
     quote: 'Happiness is a choice',
     author: '— Unknown'
   }];
+  var i = 0;
   var text = document.querySelector('.quote__text'),
       author = document.querySelector('.quote__author'),
-      btn = document.querySelector('.quote__btn'); // function generate(data) {
+      btn = document.querySelector('.quote__btn'),
+      counter = document.querySelector('.quote__counter'); // function generate(data) {
   //     data.forEach(item=>{
   //         const {quote, author} = item;
   //         let random = Math.floor(Math.random() * quotes.length)
@@ -1217,9 +1219,11 @@ var quote = function quote() {
     var random = Math.floor(Math.random() * data.length);
     text.textContent = data[random].quote;
     author.textContent = data[random].author;
+    counter.innerHTML = i;
   }
 
   btn.addEventListener('click', function (e) {
+    i++;
     generate(quotes);
   });
 };

@@ -29,6 +29,10 @@
   content: "\ea96";
 }
 
+._icon-instagram:before {
+  content: "\ea92";
+}
+
 ._ibg {
   position: relative;
 }
@@ -98,6 +102,7 @@ html, body {
 button {
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 ul li {
@@ -106,6 +111,7 @@ ul li {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 input {
@@ -244,6 +250,18 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quote__icon {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .quote__link {
@@ -262,6 +280,19 @@ textarea {
 @media (any-hover: hover) {
   .quote__link:hover {
     background: #2c435bf9;
+  }
+}
+
+.quote__counter {
+  font-size: 25px;
+  font-weight: 500;
+  color: #22313f;
+  padding-right: 20px;
+}
+
+@media (max-width: 930px) {
+  .quote__counter {
+    font-size: calc(17px + 8 * ((100vw - 320px) / 610));
   }
 }
 
@@ -286,6 +317,8 @@ textarea {
   border-radius: 6px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   color: #fff;
 }
 
